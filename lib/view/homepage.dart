@@ -24,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Colors.pink[100],
         centerTitle: true,
         title: Text('Contact Book',
-            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
+            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.pink)),
       ),
       body: _screens[_selectedIndex],
       floatingActionButton: FloatingActionButton(
@@ -41,11 +41,11 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Colors.pink[100],
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.contacts, color: Colors.white),
+            icon: Icon(Icons.contacts, color: Colors.pink),
             label: 'Numbers',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.star, color: Colors.white),
+            icon: Icon(Icons.star, color: Colors.pink),
             label: 'Favorites',
           ),
         ],

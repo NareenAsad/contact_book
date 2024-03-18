@@ -15,7 +15,7 @@ class AddContactScreen extends StatelessWidget {
         backgroundColor: Colors.pink[100],
         centerTitle: true,
         title: Text('Add Contact',
-            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
+            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.pink)),
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),

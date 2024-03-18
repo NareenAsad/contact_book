@@ -20,7 +20,7 @@ class FavoriteScreen extends StatelessWidget {
                 'No favorite contacts yet!',
                 style: TextStyle(
                     fontSize: 22,
-                    color: Colors.white,
+                    color: Colors.pink,
                     fontStyle: FontStyle.italic,
                     fontWeight: FontWeight.bold),
               ),

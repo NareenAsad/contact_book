@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:example_sharedpreference/models/contact.model.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -52,37 +53,5 @@ class ContactProvider extends ChangeNotifier {
     final List<String> contactsJson =
         _contacts.map((contact) => jsonEncode(contact.toJson())).toList();
     prefs.setStringList(_prefsKey, contactsJson);
-  }
-}
-
-class Contact {
-  final String name;
-  final String number;
-  final String? organization;
-  bool isFavorite;
-
-  Contact({
-    required this.name,
-    required this.number,
-    this.organization,
-    this.isFavorite = false,
-  });
-
-  Map<String, dynamic> toJson() {
-    return {
-      'name': name,
-      'number': number,
-      'organization': organization,
-      'isFavorite': isFavorite,
-    };
-  }
-
-  factory Contact.fromJson(Map<String, dynamic> json) {
-    return Contact(
-      name: json['name'] ?? '',
-      number: json['number'] ?? '',
-      organization: json['organization'],
-      isFavorite: json['isFavorite'] ?? false,
-    );
   }
 }

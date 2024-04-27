@@ -1,4 +1,5 @@
 import 'package:example_sharedpreference/controller/provider/providermanager.dart';
+import 'package:example_sharedpreference/models/contact.model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -80,13 +81,21 @@ class _ContactDetailScreenState extends State<ContactDetailScreen> {
               ),
             ),
             SizedBox(height: 60),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Icon(Icons.phone, color: Colors.white),
-                Icon(Icons.messenger, color: Colors.white),
-                Icon(Icons.camera_outdoor_rounded, color: Colors.white),
-              ],
+            Card(
+              elevation: 4,
+              color: Colors.pink,
+              margin: EdgeInsets.symmetric(horizontal: 30),
+              child: Padding(
+                padding: EdgeInsets.all(8),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Icon(Icons.phone, color: Colors.white),
+                    Icon(Icons.messenger, color: Colors.white),
+                    Icon(Icons.camera_outdoor_rounded, color: Colors.white),
+                  ],
+                ),
+              ),
             ),
             SizedBox(height: 80),
             Center(
